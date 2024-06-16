@@ -1,5 +1,5 @@
 # PDFjoint
-Programma in Python che unisce file pdf
+Programma in Python che unisce file pdf\n
 Usage:
 1) Rename the files that are to be merged like this: 00.pdf, 01.pdf, 02.pdf... etc.
 2) Place them in the folder that contains PDFjoint.exe
