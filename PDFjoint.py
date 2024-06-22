@@ -1,4 +1,5 @@
 from os import *
+import datetime
 from PyPDF2 import PdfMerger
 
 
@@ -28,6 +29,10 @@ def Controllo_nome(nome):
     else:
         return False
 
+def Nome_file():
+    now = datetime.datetime.now()
+    return f"PJ_{now.day}_{now.month}_{now.year}_{now.hour}_{now.minute}.pdf"
+
 Banner()
 
 x = [a for a in listdir() if Controllo_nome(a)]
@@ -40,7 +45,7 @@ if not x:
 nome_file = input("\nEnter the name of the final file >>> ")
 
 if nome_file == "":
-    nome_file = "_jointPDF.pdf" 
+    nome_file = Nome_file() 
 else:
     nome_file = nome_file + ".pdf"
 
