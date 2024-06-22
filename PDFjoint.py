@@ -31,7 +31,7 @@ def Controllo_nome(nome):
 
 def Nome_file():
     now = datetime.datetime.now()
-    return f"PJ_{now.day}_{now.month}_{now.year}_{now.hour}_{now.minute}.pdf"
+    return f"PJ_{now.day}{now.month}{now.year}_{now.hour}{now.minute}.pdf"
 
 Banner()
 
@@ -39,6 +39,10 @@ x = [a for a in listdir() if Controllo_nome(a)]
 
 if not x:
     print("\nThere are no files to join")
+    input("Press a key to exit...")
+    exit()
+elif len(x) == 1:
+    print("\nThere is just one file")
     input("Press a key to exit...")
     exit()
 
