@@ -31,7 +31,7 @@ def Controllo_nome(nome):
 
 def Nome_file():
     now = datetime.datetime.now()
-    return f"PJ_{now.day}{now.month}{now.year}_{now.hour}{now.minute}.pdf"
+    return f"PJ_{now.day}{now.month}{now.year}_{now.hour}{now.minute}{now.second}.pdf"
 
 Banner()
 
@@ -66,7 +66,10 @@ while True:
         merger = PdfMerger()
         for pdf in x:
             merger.append(pdf)
-        merger.write(nome_file)
-        merger.close()
+        try:
+            merger.write(nome_file)
+            merger.close()
+        except:
+            input("Si è verificato un errore in fase di scrittura...")
         exit()
 
