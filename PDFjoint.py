@@ -46,12 +46,18 @@ elif len(x) == 1:
     input("Press a key to exit...")
     exit()
 
-nome_file = input("\nEnter the name of the final file >>> ")
+while True:
+    nome_file = input("\nEnter the name of the final file >>> ")
+    if nome_file == "":
+        nome_file = Nome_file() 
+    else:
+        nome_file = nome_file + ".pdf"
 
-if nome_file == "":
-    nome_file = Nome_file() 
-else:
-    nome_file = nome_file + ".pdf"
+    if nome_file in listdir():
+        scelta = input("\nthe file already exists, do you want to overwrite it? (y) ")
+        if scelta == "y" or scelta == "Y" or scelta == "":
+            break
+
 
 print("\nFiles to join")
 for i in range(0, len(x)):
