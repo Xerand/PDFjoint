@@ -2,7 +2,7 @@ from os import *
 import datetime
 from PyPDF2 import PdfMerger
 
-
+#PDF merger 
 def Banner():
     banner = """
   ____  ____  _____ _       _       _    
@@ -57,6 +57,8 @@ while True:
         scelta = input("\nthe file already exists, do you want to overwrite it? (y) ")
         if scelta == "y" or scelta == "Y" or scelta == "":
             break
+    else:
+        break
 
 
 print("\nFiles to join")
