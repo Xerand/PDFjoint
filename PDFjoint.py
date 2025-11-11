@@ -13,7 +13,7 @@ def Banner():
 ╚═╝     ╚═════╝ ╚═╝    ╚════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝  
    \033[0m                                                                            
     """
-    sottotitolo = "\033[33m© A.Monti 2024\033[0m\n"
+    sottotitolo = "\033[33m© A.Monti 2025\033[0m\n"
     utilizzo = """Usage:
 1) Rename the files that are to be merged like this: 00.pdf, 01.pdf, 02.pdf... etc.
 2) Place them in the folder that contains PDFjoint.exe
